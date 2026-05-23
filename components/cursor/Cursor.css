@@ -1,0 +1,63 @@
+/* HIDE DEFAULT CURSOR */
+* {
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.custom-cursor {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 18px;
+  height: 18px;
+
+  border:
+    1px solid rgba(198,165,108,0.9);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 999999;
+
+  transition:
+    width 0.35s ease,
+    height 0.35s ease,
+    background 0.35s ease,
+    border 0.35s ease,
+    transform 0.08s linear;
+
+  backdrop-filter: blur(2px);
+
+  mix-blend-mode: difference;
+}
+
+/* HOVER STATE */
+.cursor-hover {
+  width: 65px;
+  height: 65px;
+
+  background:
+    rgba(198,165,108,0.12);
+
+  border:
+    1px solid rgba(198,165,108,0.45);
+}
+
+/* MOBILE DISABLE */
+@media(max-width: 1000px) {
+
+  .custom-cursor {
+    display: none;
+  }
+
+  * {
+    cursor: auto;
+  }
+
+}

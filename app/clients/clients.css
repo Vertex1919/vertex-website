@@ -1,0 +1,276 @@
+.clients-page {
+  background: #050505;
+  color: white;
+}
+
+/* LABEL */
+.section-label {
+  color: #c6a56c;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 24px;
+}
+
+/* HERO */
+.clients-hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.clients-hero img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.72),
+      rgba(0,0,0,0.25)
+    );
+}
+
+.hero-content {
+  position: absolute;
+
+  left: 8%;
+  bottom: 10%;
+
+  z-index: 2;
+
+  max-width: 1100px;
+}
+
+.hero-content p {
+  color: #c6a56c;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 28px;
+}
+
+.hero-content h1 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(5rem, 8vw, 8rem);
+
+  line-height: 0.9;
+  font-weight: 500;
+
+  color: white;
+}
+
+/* SHOWCASE */
+.showcase-section {
+  width: 90%;
+  max-width: 1500px;
+
+  margin: 220px auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.showcase-left img {
+  width: 100%;
+  height: 820px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+}
+
+.showcase-right h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 6vw, 6.5rem);
+
+  line-height: 0.94;
+  font-weight: 500;
+
+  margin-bottom: 36px;
+}
+
+.showcase-right span {
+  display: block;
+
+  max-width: 620px;
+
+  font-size: 21px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.72);
+}
+
+/* INDUSTRIES */
+.industries-section {
+  width: 90%;
+  max-width: 1500px;
+
+  margin: 220px auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.industries-image img {
+  width: 100%;
+  height: 820px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+}
+
+.industries-content h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 6vw, 6.5rem);
+
+  line-height: 0.94;
+  font-weight: 500;
+
+  margin-bottom: 36px;
+}
+
+.industries-content span {
+  display: block;
+
+  max-width: 620px;
+
+  font-size: 21px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.72);
+}
+
+/* CTA */
+.clients-cta {
+  position: relative;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.clients-cta img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.78),
+      rgba(0,0,0,0.45)
+    );
+}
+
+.cta-content {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.cta-content p {
+  color: #c6a56c;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 24px;
+}
+
+.cta-content h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(5rem, 8vw, 8rem);
+
+  line-height: 0.92;
+  font-weight: 500;
+
+  margin-bottom: 40px;
+}
+
+.cta-content a {
+  padding: 20px 40px;
+
+  background: #c6a56c;
+  color: black;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  transition: all 0.4s ease;
+}
+
+.cta-content a:hover {
+  background: white;
+}
+
+/* MOBILE */
+@media(max-width: 1000px) {
+
+  .showcase-section,
+  .industries-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1,
+  .showcase-right h2,
+  .industries-content h2,
+  .cta-content h2 {
+    font-size: 4rem;
+  }
+
+  .showcase-left img,
+  .industries-image img {
+    height: 500px;
+  }
+
+  .showcase-right span,
+  .industries-content span {
+    font-size: 17px;
+  }
+
+}

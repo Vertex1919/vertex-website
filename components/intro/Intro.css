@@ -1,0 +1,92 @@
+.intro {
+  background: #111111;
+
+  padding: 140px 0;
+}
+
+.intro-container {
+  width: 90%;
+  max-width: 1450px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+
+  gap: 120px;
+}
+
+.intro-label {
+  color: #c6a56c;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 24px;
+}
+
+.intro-left h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3.5rem, 6vw, 6rem);
+
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-right p {
+  color: rgba(255,255,255,0.72);
+
+  font-size: 22px;
+  line-height: 1.9;
+
+  margin-bottom: 42px;
+}
+
+.intro-right button {
+  width: fit-content;
+
+  padding: 18px 30px;
+
+  background: transparent;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  color: white;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+.intro-right button:hover {
+  background: #c6a56c;
+  color: black;
+
+  border-color: #c6a56c;
+}
+
+/* MOBILE */
+@media(max-width: 1000px) {
+
+  .intro-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .intro-right p {
+    font-size: 18px;
+  }
+
+}

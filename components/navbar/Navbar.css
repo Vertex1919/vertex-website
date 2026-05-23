@@ -1,0 +1,166 @@
+/* NAVBAR */
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 9999;
+
+  padding: 20px 0;
+
+  background:
+    rgba(0, 0, 0, 0.22);
+
+  backdrop-filter: blur(22px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    padding 0.4s ease;
+}
+
+/* CONTAINER */
+.navbar-container {
+  width: 92%;
+  max-width: 1600px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo-section {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  text-decoration: none;
+}
+
+.logo-section img {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.logo-section:hover img {
+  transform: scale(1.04);
+}
+
+/* LOGO TEXT */
+.logo-text h2 {
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  letter-spacing: 10px;
+
+  margin-bottom: 4px;
+}
+
+.logo-text span {
+  color: rgba(255,255,255,0.62);
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 46px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: rgba(255,255,255,0.82);
+
+  text-decoration: none;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* HOVER LINE */
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 0%;
+  height: 1px;
+
+  background: #c6a56c;
+
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* MOBILE */
+@media(max-width: 1000px) {
+
+  .navbar {
+    padding: 18px 0;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-text h2 {
+    font-size: 1.4rem;
+
+    letter-spacing: 6px;
+  }
+
+  .logo-text span {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+}

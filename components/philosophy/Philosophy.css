@@ -1,0 +1,99 @@
+.philosophy {
+  background: #f5f1ea;
+
+  color: black;
+
+  padding: 0;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+
+  min-height: 100vh;
+}
+
+/* IMAGE SIDE */
+.philosophy-image {
+  background-image: url("/images/philosophy/philosophy-main.webp");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTENT SIDE */
+.philosophy-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 120px;
+}
+
+.philosophy-label {
+  color: #b58d53;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 28px;
+}
+
+.philosophy-content h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+
+  line-height: 0.9;
+  font-weight: 500;
+
+  margin-bottom: 42px;
+}
+
+.philosophy-content p {
+  max-width: 620px;
+
+  color: rgba(0, 0, 0, 0.72);
+
+  font-size: 22px;
+  line-height: 1.9;
+
+  margin-bottom: 60px;
+}
+
+.philosophy-year span {
+  display: block;
+
+  color: #b58d53;
+
+  font-size: 12px;
+  letter-spacing: 5px;
+
+  margin-bottom: 10px;
+}
+
+.philosophy-year h3 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+/* MOBILE */
+@media(max-width: 1000px) {
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-image {
+    height: 500px;
+  }
+
+  .philosophy-content {
+    padding: 80px 30px;
+  }
+
+  .philosophy-content p {
+    font-size: 18px;
+  }
+
+}

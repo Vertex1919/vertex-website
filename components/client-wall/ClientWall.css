@@ -1,0 +1,187 @@
+.client-wall {
+  width: 90%;
+  max-width: 1700px;
+
+  margin: 260px auto;
+
+  color: white;
+}
+
+/* HEADER */
+.client-wall-header {
+  margin-bottom: 180px;
+}
+
+.client-wall-header p {
+  color: #c6a56c;
+
+  font-size: 12px;
+  letter-spacing: 6px;
+
+  margin-bottom: 28px;
+}
+
+.client-wall-header h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+
+  line-height: 0.9;
+  font-weight: 500;
+
+  max-width: 1200px;
+}
+
+/* GRID */
+.prestige-grid {
+  display: flex;
+  flex-direction: column;
+
+  gap: 120px;
+}
+
+/* CARD */
+.prestige-card {
+  position: relative;
+
+  width: fit-content;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* FLOATING POSITIONS */
+.prestige-1 {
+  margin-left: 0;
+}
+
+.prestige-2 {
+  margin-left: 18%;
+}
+
+.prestige-3 {
+  margin-left: 40%;
+}
+
+.prestige-4 {
+  margin-left: 10%;
+}
+
+.prestige-5 {
+  margin-left: 52%;
+}
+
+.prestige-6 {
+  margin-left: 24%;
+}
+
+/* TEXT */
+.prestige-card span {
+  position: relative;
+
+  display: inline-block;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3.5rem, 7vw, 8rem);
+
+  line-height: 0.95;
+  font-weight: 500;
+
+  color: rgba(255,255,255,0.08);
+
+  transition:
+    color 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* STROKE */
+.prestige-card span::after {
+  content: attr(data-text);
+
+  position: absolute;
+  inset: 0;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255,255,255,0.22);
+
+  z-index: -1;
+}
+
+/* HOVER */
+.prestige-card:hover span {
+  color: rgba(255,255,255,0.95);
+
+  transform:
+    translateX(18px);
+}
+
+/* GLOW */
+.card-glow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(198,165,108,0.12),
+      transparent 70%
+    );
+
+  top: -80px;
+  left: -80px;
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+
+  pointer-events: none;
+}
+
+.prestige-card:hover .card-glow {
+  opacity: 1;
+}
+
+/* FOOTER */
+.client-wall-footer {
+  margin-top: 180px;
+}
+
+.client-wall-footer p {
+  max-width: 760px;
+
+  font-size: 20px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.58);
+}
+
+/* MOBILE */
+@media(max-width: 1000px) {
+
+  .client-wall-header h2 {
+    font-size: 4rem;
+  }
+
+  .prestige-grid {
+    gap: 70px;
+  }
+
+  .prestige-card {
+    margin-left: 0 !important;
+  }
+
+  .prestige-card span {
+    font-size: 3rem;
+  }
+
+  .client-wall-footer p {
+    font-size: 17px;
+  }
+
+}

@@ -1,186 +1,166 @@
 .expertise-preview {
-  background: #0d0d0d;
-
+  background: var(--neutral-900);
   padding: 160px 0;
 }
 
 /* HEADER */
 .expertise-header {
   width: 90%;
-  max-width: 1450px;
-
-  margin: auto auto 90px auto;
-}
-
-.expertise-header p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 20px;
-}
-
-.expertise-header h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(3rem, 5vw, 5rem);
-
-  line-height: 1;
-  font-weight: 500;
-}
-
-/* EDITORIAL GRID */
-.editorial-grid {
-  width: 90%;
-  max-width: 1450px;
-
-  margin: auto;
-
+  max-width: 1400px;
+  margin: 0 auto 80px auto;
   display: grid;
-
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: 700px 400px 700px;
-
-  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
 }
 
-/* BASE CARD */
-.card {
-  position: relative;
-
-  overflow: hidden;
-
-  border-radius: 28px;
-
-  background-size: cover;
-  background-position: center;
-
-  cursor: pointer;
-
-  transition: all 0.5s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background: rgba(255, 255, 255, 0);
-
-  transition: all 0.5s ease;
-}
-
-.card:hover::after {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* OVERLAY */
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(to top,
-      rgba(0, 0, 0, 0.92),
-      rgba(0, 0, 0, 0.15));
-}
-
-/* CONTENT */
-.content {
-  position: absolute;
-
-  bottom: 50px;
-  left: 50px;
-
-  z-index: 2;
-}
-
-.content span {
-  display: block;
-
-  color: #c6a56c;
-
+.expertise-header-left .section-label {
+  font-family: var(--font-sans);
   font-size: 11px;
-  letter-spacing: 5px;
-
-  margin-bottom: 14px;
-}
-
-.content h3 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 4rem;
-  line-height: 0.95;
   font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
 }
 
-/* INDIVIDUAL CARDS */
-
-/* MARBLE */
-.marble-card {
-  background-image: url("/images/expertise/marble.webp");
-
-  grid-column: 1;
-  grid-row: 1 / span 2;
+.expertise-header-left h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
 }
 
-/* INTERIORS */
-.interiors-card {
-  background-image: url("/images/expertise/interiors.webp");
-
-  grid-column: 2;
-  grid-row: 1;
+.expertise-header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-/* WATERPROOFING */
-.waterproofing-card {
-  background-image: url("/images/expertise/waterproofing.webp");
-
-  grid-column: 1;
-  grid-row: 3;
+.expertise-header-right p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--foreground-muted);
+  max-width: 480px;
 }
 
-/* PAINTING */
-.painting-card {
-  background-image: url("/images/expertise/painting.webp");
+/* SERVICES GRID */
+.services-grid {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
 
-  grid-column: 2;
-  grid-row: 2 / span 2;
+/* SERVICE CARD */
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--neutral-800);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+}
+
+.service-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.4) 0%,
+    transparent 50%
+  );
+}
+
+.service-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.service-number {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.service-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.service-content p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--foreground-muted);
 }
 
 /* MOBILE */
-@media(max-width: 1000px) {
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-  .editorial-grid {
+@media (max-width: 768px) {
+  .expertise-preview {
+    padding: 100px 0;
+  }
+
+  .expertise-header {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    gap: 40px;
+    margin-bottom: 60px;
   }
 
-  .card {
-    min-height: 500px;
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
-  .marble-card,
-  .interiors-card,
-  .waterproofing-card,
-  .painting-card {
-    grid-column: auto;
-    grid-row: auto;
+  .service-content {
+    padding: 24px;
   }
 
-  .content {
-    left: 30px;
-    bottom: 30px;
+  .service-content h3 {
+    font-size: 1.35rem;
   }
-
-  .content h3 {
-    font-size: 3rem;
-  }
-
 }

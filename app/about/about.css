@@ -1,19 +1,16 @@
 .about-page {
-  background: #0b0b0b;
-  color: white;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 /* HERO */
 .about-hero {
   position: relative;
-
   height: 100vh;
-
+  min-height: 700px;
   background-image: url("/images/about/about-hero.webp");
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   align-items: center;
 }
@@ -21,242 +18,252 @@
 .about-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(to right,
-      rgba(0, 0, 0, 0.82),
-      rgba(0, 0, 0, 0.35));
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0.5) 100%
+  );
 }
 
 .about-hero-content {
   position: relative;
   z-index: 2;
-
   width: 90%;
-  max-width: 1500px;
-
-  margin: auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.about-hero-content p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 24px;
+.about-hero-content .hero-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
 }
 
 .about-hero-content h1 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(4rem, 8vw, 8rem);
-
-  line-height: 0.9;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
 }
 
 /* COMMON */
 .section-label {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
   margin-bottom: 24px;
 }
 
-.description {
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 22px;
-  line-height: 1.9;
+/* INTRO */
+.about-intro {
+  padding: 140px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-/* PHILOSOPHY */
-.about-philosophy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  min-height: 100vh;
-}
-
-.about-philosophy-image {
-  background-image: url("/images/about/about-philosophy.webp");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.about-philosophy-content {
-  padding: 120px;
-
+.about-intro-content {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 32px;
 }
 
-.about-philosophy-content h2 {
-  font-family: "Cormorant Garamond", serif;
+.intro-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--foreground);
+}
 
-  font-size: clamp(4rem, 7vw, 7rem);
+/* FOUNDATION */
+.about-foundation {
+  padding: 140px 0;
+  border-bottom: 1px solid var(--border);
+}
 
-  line-height: 0.95;
+.foundation-header {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto 80px auto;
+}
+
+.foundation-header h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--foreground-muted);
+  max-width: 800px;
+}
+
+.foundation-grid {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.foundation-card {
+  padding: 40px;
+  background: var(--neutral-800);
+  border: 1px solid var(--border);
+}
+
+.card-number {
+  font-family: var(--font-sans);
+  font-size: 12px;
   font-weight: 500;
-
-  margin-bottom: 42px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 24px;
 }
 
-/* STORY */
-.about-story {
+.foundation-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 16px;
+}
+
+.foundation-card p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--foreground-muted);
+}
+
+/* DIFFERENCE */
+.about-difference {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   min-height: 100vh;
 }
 
-.story-left {
-  padding: 120px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.story-left h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(4rem, 7vw, 7rem);
-
-  line-height: 0.95;
-  font-weight: 500;
-
-  margin-bottom: 42px;
-}
-
-.story-right {
-  background-image: url("/images/about/about-story.webp");
-
-  background-size: cover;
-  background-position: center;
-}
-
-/* VALUES */
-.about-values {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  min-height: 100vh;
-}
-
-.values-image {
+.difference-image {
   background-image: url("/images/about/about-values.webp");
-
   background-size: cover;
   background-position: center;
 }
 
-.values-content {
-  padding: 120px;
-
+.difference-content {
+  padding: 100px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.values-content h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(4rem, 7vw, 7rem);
-
-  line-height: 0.95;
-  font-weight: 500;
-
+.difference-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--foreground);
   margin-bottom: 60px;
 }
 
-.values-list {
+.difference-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 
-.values-list div {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+.difference-item {
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
 }
 
-.values-list span {
-  color: #c6a56c;
-
-  font-size: 14px;
-  letter-spacing: 4px;
+.difference-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.values-list h3 {
-  font-size: 2rem;
+.difference-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
   font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 12px;
+}
+
+.difference-item p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--foreground-muted);
 }
 
 /* STRIP */
 .about-strip {
-  height: 80vh;
-
+  height: 60vh;
   background-image: url("/images/about/about-strip.webp");
-
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 /* CLOSING */
 .about-closing {
-  padding: 180px 20px;
-
+  padding: 160px 20px;
   text-align: center;
-}
-
-.about-closing p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-closing h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(4rem, 7vw, 7rem);
-
-  line-height: 0.95;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--foreground);
+  margin-bottom: 48px;
 }
 
 /* MOBILE */
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
+  .foundation-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
-  .about-philosophy,
-  .about-story,
-  .about-values {
+  .foundation-card {
+    padding: 32px;
+  }
+
+  .about-difference {
     grid-template-columns: 1fr;
   }
 
-  .about-philosophy-content,
-  .story-left,
-  .values-content {
-    padding: 80px 30px;
+  .difference-image {
+    min-height: 400px;
   }
 
-  .description {
-    font-size: 18px;
+  .difference-content {
+    padding: 80px 24px;
   }
 
-  .about-philosophy-image,
-  .story-right,
-  .values-image {
-    min-height: 500px;
+  .about-strip {
+    background-attachment: scroll;
   }
 
+  .about-closing {
+    padding: 100px 20px;
+  }
 }

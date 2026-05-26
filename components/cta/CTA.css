@@ -1,87 +1,152 @@
 .cta {
   position: relative;
-
-  height: 90vh;
-
+  min-height: 100vh;
   background-image: url("/images/cta/cta-main.webp");
-
   background-size: cover;
   background-position: center;
-
+  background-attachment: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
+  padding: 120px 5%;
 }
 
 .cta-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0.55));
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.8) 0%,
+    rgba(10, 10, 10, 0.65) 50%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
 }
 
 .cta-content {
   position: relative;
   z-index: 2;
-
   text-align: center;
+  max-width: 900px;
 }
 
-.cta-content p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 28px;
+.cta-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
 }
 
 .cta-content h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  margin-bottom: 48px;
+}
 
-  font-size: clamp(4rem, 7vw, 7rem);
+.cta-locations {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 48px;
+}
 
-  line-height: 0.95;
+.cta-location {
+  text-align: center;
+}
+
+.cta-location span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
   font-weight: 500;
-
-  margin-bottom: 42px;
-}
-
-.cta-content button {
-  padding: 20px 38px;
-
-  background: #c6a56c;
-  color: black;
-
-  border: none;
-
-  font-size: 11px;
-  letter-spacing: 4px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-
-  cursor: pointer;
-
-  transition: all 0.4s ease;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
 
-.cta-content button:hover {
-  background: white;
+.cta-location p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--foreground-muted);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* TESTIMONIAL */
+.cta-testimonial {
+  position: relative;
+  z-index: 2;
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+  max-width: 700px;
+  text-align: center;
+}
+
+.cta-testimonial blockquote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin-bottom: 20px;
+}
+
+.cta-testimonial cite {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  color: var(--foreground-muted);
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
   .cta {
-    height: 70vh;
+    min-height: auto;
+    padding: 100px 5%;
+    background-attachment: scroll;
   }
 
   .cta-content h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
   }
 
+  .cta-locations {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-testimonial {
+    margin-top: 60px;
+    padding-top: 40px;
+  }
 }

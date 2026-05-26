@@ -1,292 +1,283 @@
 .careers-page {
-  background: #050505;
-  color: white;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* LABEL */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
 }
 
 /* HERO */
 .careers-hero {
   position: relative;
-
   height: 100vh;
-
+  min-height: 700px;
   overflow: hidden;
 }
 
 .careers-hero img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.78),
-      rgba(0,0,0,0.4)
-    );
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.8) 0%,
+    rgba(10, 10, 10, 0.5) 100%
+  );
 }
 
 .hero-content {
   position: absolute;
-  left: 8%;
-  bottom: 10%;
-
+  left: 5%;
+  bottom: 12%;
   z-index: 2;
-}
-
-.hero-content p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 28px;
+  width: 90%;
+  max-width: 900px;
 }
 
 .hero-content h1 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(5rem, 9vw, 9rem);
-
-  line-height: 0.9;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-/* PHILOSOPHY */
-.philosophy-section {
-  padding: 240px 8%;
-
-  text-align: center;
-}
-
-.philosophy-section h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(5rem, 8vw, 8rem);
-
-  line-height: 0.95;
-  font-weight: 500;
-}
-
-/* HORIZONTAL */
-.horizontal-section {
-  overflow-x: auto;
-
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-bottom: 200px;
-}
-
-.horizontal-track {
-  display: flex;
-
-  gap: 40px;
-
-  width: max-content;
-}
-
-.horizontal-card {
-  position: relative;
-
-  width: 850px;
-  height: 700px;
-
-  overflow: hidden;
-
-  border-radius: 32px;
-
-  flex-shrink: 0;
-}
-
-.horizontal-card img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: transform 0.7s ease;
-}
-
-.horizontal-card:hover img {
-  transform: scale(1.05);
-}
-
-.horizontal-content {
-  position: absolute;
-  left: 50px;
-  bottom: 50px;
-
-  z-index: 2;
-}
-
-.horizontal-content span {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 5px;
-
-  display: block;
-
-  margin-bottom: 20px;
-}
-
-.horizontal-content h3 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 4rem;
-  font-weight: 500;
-
-  line-height: 0.95;
-
-  max-width: 500px;
-}
-
-/* MANIFESTO */
-.manifesto-section {
+/* INTRO */
+.careers-intro {
+  padding: 120px 0;
   width: 90%;
-  max-width: 1500px;
-
-  margin: auto;
-
-  padding-bottom: 220px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 
-.manifesto-left p {
-  font-size: 28px;
+.intro-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--foreground);
+  margin-bottom: 24px;
+}
+
+.intro-subtext {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.8;
-
-  color: rgba(255,255,255,0.72);
+  color: var(--foreground-muted);
 }
 
-.manifesto-right h2 {
-  font-family: "Cormorant Garamond", serif;
+/* ROLES */
+.roles-section {
+  padding: 120px 0;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-  font-size: clamp(4rem, 7vw, 7rem);
+.roles-header {
+  margin-bottom: 80px;
+}
 
-  line-height: 0.92;
+.roles-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--foreground);
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.role-card {
+  padding: 40px;
+  background: var(--neutral-800);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-number {
+  font-family: var(--font-sans);
+  font-size: 12px;
   font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.role-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+.role-card p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--foreground-muted);
+}
+
+/* BENEFITS */
+.benefits-section {
+  padding: 120px 0;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.benefits-header {
+  margin-bottom: 80px;
+}
+
+.benefits-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--foreground);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.benefit-item {
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.benefit-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 12px;
+}
+
+.benefit-item p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--foreground-muted);
 }
 
 /* CTA */
 .careers-cta {
   position: relative;
-
-  height: 100vh;
-
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .careers-cta img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
 
 .cta-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.82),
-      rgba(0,0,0,0.45)
-    );
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
 }
 
 .cta-content {
-  position: absolute;
-  inset: 0;
-
+  position: relative;
   z-index: 2;
-
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-}
-
-.cta-content p {
-  color: #c6a56c;
-
-  font-size: 12px;
-  letter-spacing: 6px;
-
-  margin-bottom: 24px;
+  padding: 60px 20px;
 }
 
 .cta-content h2 {
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(5rem, 8vw, 8rem);
-
-  line-height: 0.92;
-  font-weight: 500;
-
-  margin-bottom: 42px;
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 48px;
 }
 
-.cta-content a {
-  color: white;
-
-  text-decoration: none;
-
-  font-size: 13px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.4);
-
-  padding-bottom: 8px;
-
-  transition: all 0.4s ease;
-}
-
-.cta-content a:hover {
-  color: #c6a56c;
-
-  border-color: #c6a56c;
+.cta-contacts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* MOBILE */
-@media(max-width: 1000px) {
-
-  .hero-content h1,
-  .philosophy-section h2,
-  .manifesto-right h2,
-  .cta-content h2 {
-    font-size: 4rem;
+@media (max-width: 1100px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .horizontal-card {
-    width: 90vw;
-    height: 500px;
-  }
-
-  .horizontal-content h3 {
-    font-size: 2.5rem;
-  }
-
-  .manifesto-section {
+@media (max-width: 768px) {
+  .roles-grid {
     grid-template-columns: 1fr;
   }
 
-  .manifesto-left p {
-    font-size: 20px;
+  .role-card {
+    padding: 32px;
   }
 
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .benefit-item {
+    padding-bottom: 32px;
+  }
+
+  .hero-content h1,
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta-contacts {
+    flex-direction: column;
+  }
+
+  .cta-contacts a {
+    width: 100%;
+    justify-content: center;
+  }
 }

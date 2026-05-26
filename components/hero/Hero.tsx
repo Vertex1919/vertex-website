@@ -1,19 +1,15 @@
 "use client";
 
 import "./Hero.css";
-
 import OptimizedImage from "@/components/optimized-image/OptimizedImage";
 
 export default function Hero() {
-
   return (
-
     <section className="hero-section">
-
       {/* HERO IMAGE */}
       <OptimizedImage
         src="/images/hero/hero.webp"
-        alt="Luxury Architectural Environment"
+        alt="Premium Construction Environment"
         priority
         className="hero-image"
       />
@@ -23,49 +19,49 @@ export default function Hero() {
 
       {/* CONTENT */}
       <div className="hero-content">
-
-        <p>
-          PREMIUM CONSTRUCTION & INTERIOR ENVIRONMENTS
-        </p>
+        <p className="hero-label">Premium Construction & Interior Services</p>
 
         <h1>
-          Crafted Through <br />
-          Precision, Luxury <br />
-          And Intelligent <br />
-          Execution.
+          Finishing Excellence.
+          <br />
+          Built to Last.
         </h1>
 
         <span className="hero-subtext">
-          Vertex Construction & Services
-          delivers premium marble,
-          waterproofing, painting and
-          interior execution environments
-          through refined craftsmanship,
-          practical planning and
-          architectural precision.
+          India&apos;s top developers don&apos;t settle at the structure. They settle
+          at the finish. That&apos;s where Vertex Construction Services begins.
+          From marble alignment to waterproofing precision — we deliver what we
+          promise, every single time.
         </span>
 
         {/* BUTTONS */}
         <div className="hero-buttons">
-
-          <a
-            href="/expertise"
-            className="hero-primary"
-          >
-            Explore Expertise
+          <a href="/contact" className="btn-primary">
+            Schedule Consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
 
           <a
-            href="/contact"
-            className="hero-secondary"
+            href="https://wa.me/917899042875"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
           >
-            Request Consultation
+            WhatsApp Us
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
           </a>
-
         </div>
-
       </div>
 
+      {/* SCROLL INDICATOR */}
+      <div className="hero-scroll">
+        <span>Scroll</span>
+        <div className="scroll-line"></div>
+      </div>
     </section>
   );
 }

@@ -4,92 +4,105 @@ import FadeUp from "@/components/animations/FadeUp";
 export default function ContactPage() {
   return (
     <main className="contact-page">
-
       {/* HERO */}
       <section className="contact-hero">
-
-        <img
-          src="/images/contact/contact-hero.webp"
-          alt="Vertex Contact"
-        />
-
+        <img src="/images/contact/contact-hero.webp" alt="Contact Vertex" />
         <div className="hero-overlay"></div>
-
         <div className="hero-content">
-
-          <p>
-            REQUEST A CONSULTATION
-          </p>
-
+          <p className="section-label">Contact Us</p>
           <h1>
-            Exceptional Spaces <br />
-            Begin Through <br />
-            Vision, Precision <br />
-            And Conversation.
+            Let&apos;s Talk
+            <br />
+            Business.
           </h1>
-
         </div>
-
       </section>
 
-      {/* CONSULTATION SPACE */}
+      {/* CONTACT INFO */}
       <FadeUp>
-
-        <section className="consultation-section">
-
-          <div className="consultation-left">
-
-            <img
-              src="/images/contact/consultation-space.webp"
-              alt="Consultation Space"
-            />
-
-          </div>
-
-          <div className="consultation-right">
-
-            <p className="section-label">
-              CONSULTATION EXPERIENCE
+        <section className="contact-info-section">
+          <div className="contact-intro">
+            <p>
+              Whether you&apos;re planning a 300-unit residential tower or a boutique
+              commercial space, the conversation starts here.
             </p>
-
-            <h2>
-              Designed Around <br />
-              Clarity, Detail <br />
-              And Architectural <br />
-              Thinking.
-            </h2>
-
-            <span>
-              Vertex collaborates closely with
-              clients to understand spatial
-              requirements, material direction,
-              execution standards and long-term
-              architectural value across every
-              premium environment.
-            </span>
-
           </div>
 
-        </section>
+          <div className="contact-grid">
+            <div className="contact-card">
+              <h3>Head Office</h3>
+              <p>Hyderabad, Telangana, India</p>
+            </div>
 
+            <div className="contact-card">
+              <h3>Operations Hub</h3>
+              <p>Bengaluru, Karnataka, India</p>
+            </div>
+
+            <div className="contact-card">
+              <h3>Phone & WhatsApp</h3>
+              <p>
+                <a href="tel:+917899042875">+91 78990 42875</a>
+                <br />
+                <a href="tel:+919901207418">+91 99012 07418</a>
+              </p>
+            </div>
+
+            <div className="contact-card">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:hello@vertexconstructionservices.in">
+                  hello@vertexconstructionservices.in
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="whatsapp-section">
+            <p className="section-label">WhatsApp Connect</p>
+            <span>
+              For project enquiries, scope discussions, and urgent site queries —
+              WhatsApp is the fastest route to our team.
+            </span>
+            <div className="whatsapp-buttons">
+              <a
+                href="https://wa.me/917899042875"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Message +91 78990 42875
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/919901207418"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                Message +91 99012 07418
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
       </FadeUp>
 
       {/* FORM */}
       <FadeUp>
-
         <section className="form-section">
-
           <div className="form-intro">
-
-            <p className="section-label">
-              START A PROJECT
-            </p>
-
+            <p className="section-label">Enquiry Form</p>
             <h2>
-              Request A <br />
-              Private Consultation.
+              Request A
+              <br />
+              Consultation.
             </h2>
-
+            <span className="form-note">Response within 1 business day.</span>
           </div>
 
           <form
@@ -97,63 +110,59 @@ export default function ContactPage() {
             method="POST"
             className="contact-form"
           >
+            <div className="form-row">
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+              />
+              <input
+                type="text"
+                name="company"
+                placeholder="Company / Developer Name"
+              />
+            </div>
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-            />
+            <div className="form-row">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
+            <div className="form-row">
+              <select name="service" required>
+                <option value="">Service Required</option>
+                <option value="marble">Marble / Tile / Granite</option>
+                <option value="waterproofing">Waterproofing</option>
+                <option value="interior">Interior Designing</option>
+                <option value="painting">Painting</option>
+                <option value="multiple">Multiple Services</option>
+              </select>
 
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              required
-            />
-
-            <select
-              name="project"
-              required
-            >
-
-              <option value="">
-                Select Project Type
-              </option>
-
-              <option>
-                Italian Marble Services
-              </option>
-
-              <option>
-                Interior Design Services
-              </option>
-
-              <option>
-                Waterproofing Solutions
-              </option>
-
-              <option>
-                Painting Services
-              </option>
-
-              <option>
-                Full Consultation
-              </option>
-
-            </select>
+              <select name="scale" required>
+                <option value="">Project Scale</option>
+                <option value="under-50">Under 50 units</option>
+                <option value="50-200">50–200 units</option>
+                <option value="200+">200+ units</option>
+                <option value="commercial">Commercial</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
             <input
               type="text"
               name="location"
-              placeholder="Project Location"
+              placeholder="City / Project Location"
             />
 
             <textarea
@@ -164,45 +173,30 @@ export default function ContactPage() {
             ></textarea>
 
             <button type="submit">
-              Submit Consultation
+              Submit Enquiry
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </button>
-
           </form>
-
         </section>
-
       </FadeUp>
 
       {/* CTA */}
       <section className="contact-cta">
-
-        <img
-          src="/images/contact/contact-cta.webp"
-          alt="Vertex Contact CTA"
-        />
-
+        <img src="/images/contact/contact-cta.webp" alt="Build with Vertex" />
         <div className="cta-overlay"></div>
-
         <div className="cta-content">
-
-          <p>
-            HELLO@VERTEXCONSTRUCTIONSERVICES.IN
-          </p>
-
+          <p className="section-label">hello@vertexconstructionservices.in</p>
           <h2>
-            Let’s Build <br />
-            Something <br />
+            Let&apos;s Build
+            <br />
+            Something
+            <br />
             Exceptional.
           </h2>
-
-          <a href="mailto:hello@vertexconstructionservices.in">
-            hello@vertexconstructionservices.in
-          </a>
-
         </div>
-
       </section>
-
     </main>
   );
 }

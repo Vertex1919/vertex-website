@@ -1,150 +1,150 @@
 import "./about.css";
+import FadeUp from "@/components/animations/FadeUp";
 
 export default function AboutPage() {
   return (
     <main className="about-page">
-
       {/* HERO */}
       <section className="about-hero">
-
         <div className="about-overlay"></div>
-
         <div className="about-hero-content">
-
-          <p>ABOUT VERTEX</p>
-
+          <p className="hero-label">About Vertex</p>
           <h1>
-            Crafted Through <br />
-            Precision, Discipline <br />
-            And Architectural <br />
-            Excellence.
+            Built on Craft.
+            <br />
+            Driven by
+            <br />
+            Commitment.
           </h1>
-
         </div>
-
       </section>
 
-      {/* PHILOSOPHY */}
-      <section className="about-philosophy">
+      {/* INTRO SECTION */}
+      <FadeUp>
+        <section className="about-intro">
+          <div className="about-intro-content">
+            <p className="intro-text">
+              Vertex Construction Services was founded in Bengaluru in 2021 with
+              a singular ambition: to bring accountability and precision to
+              finishing services in Indian construction.
+            </p>
+            <p className="intro-text">
+              Too many projects in India&apos;s booming real estate sector suffer at
+              the final mile — poor tile alignment, leaking terraces,
+              inconsistent paint finishes. Vertex was built specifically to
+              eliminate that failure.
+            </p>
+          </div>
+        </section>
+      </FadeUp>
 
-        <div className="about-philosophy-image"></div>
-
-        <div className="about-philosophy-content">
-
-          <p className="section-label">
-            OUR PHILOSOPHY
-          </p>
-
-          <h2>
-            Precision Is Quiet. <br />
-            But It Defines <br />
-            Everything.
-          </h2>
-
-          <p className="description">
-            Vertex Construction & Services was founded
-            with a vision to deliver refined execution
-            environments that combine craftsmanship,
-            luxury materials, architectural discipline,
-            and timeless visual sophistication across
-            every project touchpoint.
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* STORY */}
-      <section className="about-story">
-
-        <div className="story-left">
-
-          <p className="section-label">
-            THE VERTEX STORY
-          </p>
-
-          <h2>
-            Built For Modern <br />
-            Luxury Execution.
-          </h2>
-
-          <p className="description">
-            Since 2023, Vertex has expanded across
-            Bengaluru, Hyderabad, and Mumbai,
-            delivering premium marble craftsmanship,
-            luxury interiors, waterproofing systems,
-            and architectural finishing solutions
-            engineered with precision and consistency.
-          </p>
-
-        </div>
-
-        <div className="story-right"></div>
-
-      </section>
-
-      {/* VALUES */}
-      <section className="about-values">
-
-        <div className="values-image"></div>
-
-        <div className="values-content">
-
-          <p className="section-label">
-            CORE VALUES
-          </p>
-
-          <h2>
-            Luxury Is Built <br />
-            Through Discipline.
-          </h2>
-
-          <div className="values-list">
-
-            <div>
-              <span>01</span>
-              <h3>Precision</h3>
-            </div>
-
-            <div>
-              <span>02</span>
-              <h3>Reliability</h3>
-            </div>
-
-            <div>
-              <span>03</span>
-              <h3>Craftsmanship</h3>
-            </div>
-
-            <div>
-              <span>04</span>
-              <h3>Architectural Detail</h3>
-            </div>
-
+      {/* VISION & METHOD */}
+      <FadeUp>
+        <section className="about-foundation">
+          <div className="foundation-header">
+            <p className="section-label">Our Foundation</p>
+            <h2>
+              Today, headquartered in Hyderabad with active operations across
+              Bengaluru, Vertex partners with India&apos;s leading developers.
+            </h2>
           </div>
 
-        </div>
+          <div className="foundation-grid">
+            <div className="foundation-card">
+              <span className="card-number">01</span>
+              <h3>The Vision</h3>
+              <p>
+                To be India&apos;s most trusted finishing partner — from Hyderabad
+                and Bengaluru to every major construction market across the
+                country.
+              </p>
+            </div>
 
+            <div className="foundation-card">
+              <span className="card-number">02</span>
+              <h3>The Method</h3>
+              <p>
+                Vertex operates on a single operational principle: Do it once.
+                Do it right. Deliver it premium. Every project is staffed with
+                experienced labourers, site engineers, and project managers
+                accountable to one standard — yours.
+              </p>
+            </div>
+
+            <div className="foundation-card">
+              <span className="card-number">03</span>
+              <h3>The Promise</h3>
+              <p>
+                No fabricated timelines. No inflated claims. Transparent
+                communication from first briefing to final handover.
+              </p>
+            </div>
+          </div>
+        </section>
+      </FadeUp>
+
+      {/* DIFFERENCE SECTION */}
+      <section className="about-difference">
+        <div className="difference-image"></div>
+        <div className="difference-content">
+          <FadeUp>
+            <p className="section-label">The Vertex Difference</p>
+            <h2>
+              Delivering where every detail is owned, every deadline is met.
+            </h2>
+
+            <div className="difference-list">
+              <div className="difference-item">
+                <h4>Strict Quality Control</h4>
+                <p>
+                  Every surface, every joint, every coat — reviewed before
+                  sign-off.
+                </p>
+              </div>
+
+              <div className="difference-item">
+                <h4>Timely Delivery</h4>
+                <p>
+                  We build project timelines we can hold. Delays at the
+                  finishing stage cost developers money and reputation. We take
+                  that seriously.
+                </p>
+              </div>
+
+              <div className="difference-item">
+                <h4>Honest Partnerships</h4>
+                <p>
+                  Our client relationships are built on trust, not persuasion.
+                  We earn repeat business through delivery, not sales tactics.
+                </p>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
       </section>
 
       {/* STRIP IMAGE */}
       <section className="about-strip"></section>
 
       {/* CLOSING */}
-      <section className="about-closing">
-
-        <p>
-          BUILDING PREMIUM ENVIRONMENTS ACROSS INDIA
-        </p>
-
-        <h2>
-          Vertex Exists To Create <br />
-          Timeless Architectural <br />
-          Experiences.
-        </h2>
-
-      </section>
-
+      <FadeUp>
+        <section className="about-closing">
+          <p className="section-label">Building Premium Environments Across India</p>
+          <h2>
+            Vertex Exists To Create
+            <br />
+            Timeless Architectural
+            <br />
+            Experiences.
+          </h2>
+          <a href="/contact" className="btn-primary">
+            Connect With Our Team
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </section>
+      </FadeUp>
     </main>
   );
 }
